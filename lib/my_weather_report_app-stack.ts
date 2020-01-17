@@ -10,6 +10,7 @@ export class MyWeatherReportAppStack extends cdk.Stack {
     super(scope, id, props);
 
     // define the location of the code
+    
     const lambdaCode = lambda.Code.fromAsset("./lambda/func.zip");
 
     //create a lambda function
@@ -21,7 +22,8 @@ export class MyWeatherReportAppStack extends cdk.Stack {
       timeout: Duration.seconds(30)
     });
 
-    //add permission
+    // grant lambda permission to manipulate sns
+
     const statement = new iam.PolicyStatement();
     statement.addActions("lambda:InvokeFunction");
     statement.addResources("*");

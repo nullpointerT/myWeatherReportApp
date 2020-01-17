@@ -1,4 +1,4 @@
-const axios = require  ('axios');
+const axios = require ('axios');
 const AWS = require("aws-sdk");
 
 let weatherInfo:any = {};
