@@ -1,5 +1,5 @@
 const axios = require  ('axios');
-const  AWS = require("aws-sdk");
+const AWS = require("aws-sdk");
 
 let weatherInfo:any = {};
 let weatherMsg:string = "";
